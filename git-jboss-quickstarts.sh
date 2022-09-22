@@ -1,0 +1,1 @@
+git clone https://github.com/jboss-developer/jboss-eap-quickstarts.git
