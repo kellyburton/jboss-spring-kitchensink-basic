@@ -1,3 +1,27 @@
+## Created by Kelly Burton Sep 2022 @JakelTech.com
+
+After you checkout this repo, check out the jboss quick start repo from here:
+
+git clone https://github.com/jboss-developer/jboss-eap-quickstarts.git
+
+Execute ./build-docker.sh
+
+After Build Run your new image
+
+Excute ./run-docker.sh
+
+Access control panel at http://localhost:9990
+UserName: admin
+PassWord: saTX##321
+
+Access the App at http://localhost:8080/spring-kitchensink-basic/
+
+##TODO mount use dedicated volume so we can wipe container and save settings
+##TODO or mount to local dir so we can edit config for tinkering.
+
+
+From the Jboss Site:
+
 Extending the image
 
 To be able to create a management user to access the administration console create a Dockerfile with the following content
@@ -11,7 +35,4 @@ docker build --tag=jboss/wildfly-admin .
 Run it:
 docker run -it -p 8080:8080 -p9990:9990 jboss/wildfly-admin
 Administration console will be available on the port 9990 and 8080  of the container.
-
-To See Kitchen Sink Spring Demo http://localhost:8080/spring-kitchensink-basic/
-
 
